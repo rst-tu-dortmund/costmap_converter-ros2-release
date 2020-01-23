@@ -1,0 +1,12 @@
+Source: ros-dashing-costmap-converter
+Section: misc
+Priority: optional
+Maintainer: Christoph Rösmann <christoph.roesmann@tu-dortmund.de>
+Build-Depends: debhelper (>= 9.0.0), ros-dashing-ament-cmake, ros-dashing-ament-cmake-gtest, ros-dashing-class-loader, ros-dashing-costmap-converter-msgs, ros-dashing-cv-bridge, ros-dashing-geometry-msgs, ros-dashing-nav2-costmap-2d, ros-dashing-pluginlib, ros-dashing-rclcpp, ros-dashing-tf2, ros-dashing-ros-workspace
+Homepage: http://wiki.ros.org/costmap_converter
+Standards-Version: 3.9.2
+
+Package: ros-dashing-costmap-converter
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-dashing-class-loader, ros-dashing-costmap-converter-msgs, ros-dashing-cv-bridge, ros-dashing-geometry-msgs, ros-dashing-nav2-costmap-2d, ros-dashing-pluginlib, ros-dashing-rclcpp, ros-dashing-tf2, ros-dashing-ros-workspace
+Description: A ros package that includes plugins and nodes to convert occupied costmap2d cells to primitive types.
