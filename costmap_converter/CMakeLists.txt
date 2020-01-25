@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 3.5)
 project(costmap_converter)
 
+# Set to Release in order to speed up the program significantly
+set(CMAKE_BUILD_TYPE Release) #None, Debug, Release, RelWithDebInfo, MinSizeRel
+
 if(NOT CMAKE_CXX_STANDARD)
   set(CMAKE_CXX_STANDARD 14)
 endif()
@@ -77,15 +80,10 @@ install(DIRECTORY include/
    DESTINATION include/
 )
 
-install(FILES
-  plugins.xml
-  DESTINATION share
-)
-
 ament_export_include_directories(include)
 ament_export_libraries(costmap_converter)
 ament_export_dependencies(${dependencies})
-pluginlib_export_plugin_description_file(costmap_converter plugins.xml)
+pluginlib_export_plugin_description_file(costmap_converter costmap_converter_plugins.xml)
 
 if(BUILD_TESTING)
   find_package(ament_cmake_gtest REQUIRED)
