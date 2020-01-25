@@ -2,6 +2,12 @@
 Changelog for package costmap_converter
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.1.1 (2020-01-25)
+------------------
+* Fixed ament plugin export
+* Revert release-mode for cmake build
+* Contributors: Christoph Rösmann
+
 0.1.0 (2020-01-23)
 ------------------
 * Port to ROS2 (thanks to Vinnam Kim and stevemacenski)
